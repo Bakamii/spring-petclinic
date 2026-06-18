@@ -1,0 +1,14 @@
+name: "Greet User Action Docker"
+description: "Une action qui salue un utilisateur avec un message personnalisé"
+inputs:
+  message:
+    description: "Message à afficher dans les logs et à renvoyer en output"
+    required: true
+outputs:
+  message:
+    description: "Le message inputs à renvoyer en output"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.message }}
