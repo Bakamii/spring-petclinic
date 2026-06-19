@@ -61,7 +61,7 @@ jobs:
       - name: Cloner le dépôt d'infrastructure
         uses: actions/checkout@v4
         with:
-          repository: 'bakamii/gitops-infra' # A REMPLACER (ex: <VOTRE_USER_GITHUB>/gitops-infra)
+          repository: 'bakamii/kustomize' # A REMPLACER (ex: <VOTRE_USER_GITHUB>/gitops-infra)
           token: ${{ secrets.GITOPS_PAT }}
           path: 'kustomize/overlays' # On clone dans un sous-dossier pour ne pas écraser l'espace de travail
 
